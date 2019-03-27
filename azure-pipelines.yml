@@ -13,5 +13,14 @@ variables:
   imageName: 'quickdevnotes/webapp:$(build.buildNumber)'
 
 steps:
-- script: docker build -f Dockerfile -t $(imageName) .
-  displayName: 'docker build'
+- task: Docker@1
+  displayName: Build image
+  inputs:
+    command: Build an image
+    containerregistrytype: Container Registry
+    dockerRegistryEndpoint: DockerHub
+    dockerFile: Dockerfile
+    imageName: $(imageName)
+    imageNamesPath: 
+    restartPolicy: always
+
