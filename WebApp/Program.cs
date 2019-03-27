@@ -12,7 +12,7 @@ namespace WebApp
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                //.UseUrls(args[1])
+                .UseUrls(args[1])
                 .UseStartup<Startup>();
     }
 }
