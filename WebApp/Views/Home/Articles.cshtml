@@ -1,0 +1,30 @@
+﻿@model ArticlesViewModel
+@{
+    ViewData["Title"] = "Articles";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="display-4">Latest posts published on the WebApp!</h2>
+        <hr class="my-4">
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group list-group-flush">
+                @foreach (var article in Model.Articles)
+                {
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">@article.Title</h3>
+                            <em class="card-footer text-muted">Published on @article.PublishedOn.ToLongDateString()</em>
+                            <p class="card-text">@article.Content</p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
