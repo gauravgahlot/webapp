@@ -4,7 +4,7 @@ WORKDIR /app
 COPY *.csproj ./
 RUN dotnet restore 
 
-COPY . .
+COPY . ./
 RUN dotnet publish -c Release -o /out
 
 # Build runtime image
