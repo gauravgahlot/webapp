@@ -33,14 +33,14 @@ namespace WebApp
                 PublishedOn = new DateTime(2019, 01, 22),
                 Content = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
             },
-            // new Article
-            // {
-            //     Id = 4,
-            //     Title = "Yet another article",
-            //     Author= "Gaurav Gahlot",
-            //     PublishedOn = new DateTime(2019, 03, 27),
-            //     Content = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
-            // },
+            new Article
+            {
+                Id = 4,
+                Title = "Yet another article",
+                Author= "Gaurav Gahlot",
+                PublishedOn = new DateTime(2019, 03, 27),
+                Content = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+            },
         };
 
         public Article GetArticle(int id)
